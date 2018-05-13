@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/gyc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/jpl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/lzg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/syz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/szh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/znn" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent/zq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/webapp" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

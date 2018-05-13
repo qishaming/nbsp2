@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gyc" />
+        <module name="jpl" />
+        <module name="lzg" />
+        <module name="syz" />
+        <module name="szh" />
+        <module name="util" />
+        <module name="webapp" />
+        <module name="znn" />
+        <module name="zq" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gyc" target="1.7" />
+      <module name="jpl" target="1.7" />
+      <module name="lzg" target="1.7" />
+      <module name="nbsp2" target="1.7" />
+      <module name="parent" target="1.7" />
+      <module name="syz" target="1.7" />
+      <module name="szh" target="1.7" />
+      <module name="util" target="1.7" />
+      <module name="webapp" target="1.7" />
+      <module name="znn" target="1.7" />
+      <module name="zq" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

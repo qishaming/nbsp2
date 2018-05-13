@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/parent/gyc/gyc.iml" filepath="$PROJECT_DIR$/parent/gyc/gyc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/jpl/jpl.iml" filepath="$PROJECT_DIR$/parent/jpl/jpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/lzg/lzg.iml" filepath="$PROJECT_DIR$/parent/lzg/lzg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nbsp2.iml" filepath="$PROJECT_DIR$/nbsp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/syz/syz.iml" filepath="$PROJECT_DIR$/parent/syz/syz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/szh/szh.iml" filepath="$PROJECT_DIR$/parent/szh/szh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webapp/webapp.iml" filepath="$PROJECT_DIR$/webapp/webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/znn/znn.iml" filepath="$PROJECT_DIR$/parent/znn/znn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/zq/zq.iml" filepath="$PROJECT_DIR$/parent/zq/zq.iml" />
+    </modules>
+  </component>
+</project>
