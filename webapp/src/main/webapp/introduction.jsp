@@ -266,7 +266,7 @@
                         <input id="min" class="am-btn am-btn-default" name="" type="button" value="-" />
                         <input id="text_box" name="" type="text" value="1" style="width:30px;" />
                         <input id="add" class="am-btn am-btn-default" name="" type="button" value="+" />
-                        <span id="Stock" class="tb-hidden">库存<span class="stock">1000</span>件</span>
+                        <span id="" class="tb-hidden">库存<span class="stock">1000</span>件</span>
                     </dd>
 
 
@@ -277,6 +277,7 @@
                 <div class="btn close am-btn am-btn-warning">取消</div>
             </div>
         </div>
+
         <div class="theme-signin-right">
             <div class="img-info">
                 <img src="<%=path %>/fisrtpage/images/songzi.jpg" />
