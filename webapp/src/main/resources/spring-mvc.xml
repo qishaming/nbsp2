@@ -14,7 +14,7 @@
     
     
    	<!--  静态文件访问,主要是让DispatcherServlet不拦截以下静态资源 -->
-	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/fisrtpage/" mapping="/fisrtpage/**"/>
 	<mvc:resources location="/image/" mapping="/image/**"/>
 	<mvc:resources location="/images/" mapping="/images/**"/>
 	<mvc:resources location="/css2/" mapping="/css2/**"/>

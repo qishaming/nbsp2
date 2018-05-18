@@ -14,17 +14,18 @@
 
     <title>购物车页面</title>
 
-    <link href="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/css/optstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/css/optstyle.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="<%=path %>/fisrtpage/js/jquery.js"></script>
+    <script type="text/javascript" src="<%=path%>/fisrtpage/js/jquery.js"></script>
 
 
 </head>
 <body>
 
+<!--顶部导航条 -->
 <!--顶部导航条 -->
 <div class="am-container header">
     <ul class="message-l">
@@ -47,14 +48,15 @@
         </div>
         <div class="topMessage favorite">
             <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
-        </div>
     </ul>
+</div>
+
 <!--悬浮搜索框-->
 
 <div class="nav white">
-    <div class="logo"><img src="<%=path %>/fisrtpage/images/logo.png" /></div>
+    <div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
     <div class="logoBig">
-        <li><img src="<%=path %>/fisrtpage/images/logobig.png" /></li>
+        <li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
     </div>
 
     <div class="search-bar pr">
@@ -113,14 +115,14 @@
                     <ul class="item-content clearfix">
                         <li class="td td-chk">
                             <div class="cart-checkbox ">
-                                <input class="check" id="" name="items[]" value="170037950254" type="checkbox">
-                                <label for=""></label>
+                                <input class="check" id="J_CheckBox_170037950254" name="items[]" value="170037950254" type="checkbox">
+                                <label for="J_CheckBox_170037950254"></label>
                             </div>
                         </li>
                         <li class="td td-item">
                             <div class="item-pic">
                                 <a href="#" target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
-                                    <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+                                    <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
                             </div>
                             <div class="item-info">
                                 <div class="item-basic-info">
@@ -180,14 +182,14 @@
                     <ul class="item-content clearfix">
                         <li class="td td-chk">
                             <div class="cart-checkbox ">
-                                <input class="check" id="" name="items[]" value="170037950254" type="checkbox">
-                                <label for=""></label>
+                                <input class="check" id="J_CheckBox_170037950254" name="items[]" value="170037950254" type="checkbox">
+                                <label for="J_CheckBox_170037950254"></label>
                             </div>
                         </li>
                         <li class="td td-item">
                             <div class="item-pic">
                                 <a href="#" target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
-                                    <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+                                    <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
                             </div>
                             <div class="item-info">
                                 <div class="item-basic-info">
@@ -272,7 +274,7 @@
                         <li class="td td-item">
                             <div class="item-pic">
                                 <a href="#" target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
-                                    <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+                                    <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
                             </div>
                             <div class="item-info">
                                 <div class="item-basic-info">
@@ -436,7 +438,7 @@
             </div>
             <div class="theme-signin-right">
                 <div class="img-info">
-                    <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" />
+                    <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" />
                 </div>
                 <div class="text-info">
                     <span class="J_Price price-now">¥39.00</span>
@@ -449,12 +451,11 @@
 </div>
 <!--引导 -->
 <div class="navCir">
-    <li><a href="home2.html"><i class="am-icon-home "></i>首页</a></li>
+    <li><a href="home.html"><i class="am-icon-home "></i>首页</a></li>
     <li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
     <li class="active"><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
-    <li><a href="<%=path %>/fisrtpage/person/index.html"><i class="am-icon-user"></i>我的</a></li>
+    <li><a href="<%=path%>/fisrtpage/person/index.html"><i class="am-icon-user"></i>我的</a></li>
 </div>
 
-</div>
 </body>
 </html>

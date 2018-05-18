@@ -15,12 +15,12 @@
     <title>前台页面</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/css/hmstyle.css" rel="stylesheet" type="text/css" />
-    <script src="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-    <script src="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+    <link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/css/hmstyle.css" rel="stylesheet" type="text/css" />
+    <script src="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+    <script src="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 </head>
 
@@ -48,14 +48,15 @@
             </div>
             <div class="topMessage favorite">
                 <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
-            </div>
         </ul>
+    </div>
+
     <!--悬浮搜索框-->
 
     <div class="nav white">
-        <div class="logo"><img src="<%=path %>/fisrtpage/images/logo.png" /></div>
+        <div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
         <div class="logoBig">
-            <li><img src="<%=path %>/fisrtpage/images/logobig.png" /></li>
+            <li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
         </div>
 
         <div class="search-bar pr">
@@ -75,10 +76,10 @@
     <!--轮播 -->
     <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
         <ul class="am-slides">
-            <li class="banner1"><a href="<%=path %>/fisrtpage/introduction.html"><img src="<%=path %>/fisrtpage/images/ad1.jpg" /></a></li>
-            <li class="banner2"><a><img src="<%=path %>/fisrtpage/images/ad2.jpg" /></a></li>
-            <li class="banner3"><a><img src="<%=path %>/fisrtpage/images/ad3.jpg" /></a></li>
-            <li class="banner4"><a><img src="<%=path %>/fisrtpage/images/ad4.jpg" /></a></li>
+            <li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
+            <li class="banner2"><a><img src="<%=path%>/fisrtpage/images/ad2.jpg" /></a></li>
+            <li class="banner3"><a><img src="<%=path%>/fisrtpage/images/ad3.jpg" /></a></li>
+            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>
 
         </ul>
     </div>
@@ -112,7 +113,7 @@
                         <ul class="category-list" id="js_climit_li">
                             <li class="appliance js_toggle relative first">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -163,7 +164,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -223,7 +224,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -276,7 +277,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -326,7 +327,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -378,7 +379,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -428,7 +429,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -480,7 +481,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -538,7 +539,7 @@
                             </li>
                             <li class="appliance js_toggle relative">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -587,7 +588,7 @@
                             </li>
                             <li class="appliance js_toggle relative last">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="<%=path %>/fisrtpage/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="<%=path%>/fisrtpage/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -661,22 +662,22 @@
         <!--小导航 -->
         <div class="am-g am-g-fixed smallnav">
             <div class="am-u-sm-3">
-                <a href="sort.html"><img src="<%=path %>/fisrtpage/images/navsmall.jpg" />
+                <a href="sort.html"><img src="<%=path%>/fisrtpage/images/navsmall.jpg" />
                     <div class="title">商品分类</div>
                 </a>
             </div>
             <div class="am-u-sm-3">
-                <a href="#"><img src="<%=path %>/fisrtpage/images/huismall.jpg" />
+                <a href="#"><img src="<%=path%>/fisrtpage/images/huismall.jpg" />
                     <div class="title">大聚惠</div>
                 </a>
             </div>
             <div class="am-u-sm-3">
-                <a href="#"><img src="<%=path %>/fisrtpage/images/mansmall.jpg" />
+                <a href="#"><img src="<%=path%>/fisrtpage/images/mansmall.jpg" />
                     <div class="title">个人中心</div>
                 </a>
             </div>
             <div class="am-u-sm-3">
-                <a href="#"><img src="<%=path %>/fisrtpage/images/moneysmall.jpg" />
+                <a href="#"><img src="<%=path%>/fisrtpage/images/moneysmall.jpg" />
                     <div class="title">投资理财</div>
                 </a>
             </div>
@@ -690,19 +691,19 @@
 
                 <ul>
                     <li class="title-first"><a target="_blank" href="#">
-                        <img src="<%=path %>/fisrtpage/images/TJ2.jpg"></img>
+                        <img src="<%=path%>/fisrtpage/images/TJ2.jpg"></img>
                         <span>[特惠]</span>商城爆品1分秒
                     </a></li>
                     <li class="title-first"><a target="_blank" href="#">
                         <span>[公告]</span>商城与广州市签署战略合作协议
-                        <img src="../images/TJ.jpg"></img>
+                        <img src="<%=path%>/fisrtpage/images/TJ.jpg"></img>
                         <p>XXXXXXXXXXXXXXXXXX</p>
                     </a></li>
 
                     <div class="mod-vip">
                         <div class="m-baseinfo">
-                            <a href="<%=path %>/fisrtpage/person/index.html">
-                                <img src="<%=path %>/fisrtpage/images/getAvatar.do.jpg">
+                            <a href="<%=path%>/fisrtpage/person/index.html">
+                                <img src="<%=path%>/fisrtpage/images/getAvatar.do.jpg">
                             </a>
                             <em>
                                 Hi,<span class="s-name">小叮当</span>
@@ -710,13 +711,8 @@
                             </em>
                         </div>
                         <div class="member-logout">
-                            <a class="am-btn-warning btn" href="<%=path %>/login.jsp">登录</a>
-                            <a class="am-btn-warning btn" href="<%=path %>/zhuche.jsp">注册</a>
-                            <%--模板自带的登录和注册
-                            <a class="am-btn-warning btn" href="<%=path %>/fisrtpage/home/login.html">登录</a>
-                            <a class="am-btn-warning btn" href="<%=path %>/fisrtpage/home/register.html">注册</a>
-                                --%>
-
+                            <a class="am-btn-warning btn" href="login.html">登录</a>
+                            <a class="am-btn-warning btn" href="register.html">注册</a>
                         </div>
                         <div class="member-login">
                             <a href="#"><strong>0</strong>待收货</a>
@@ -732,7 +728,7 @@
                     <li><a target="_blank" href="#"><span>[特惠]</span>家电狂欢千亿礼券 买1送1！</a></li>
 
                 </ul>
-                <div class="advTip"><img src="<%=path %>/fisrtpage/images/advTip.jpg"/></div>
+                <div class="advTip"><img src="<%=path%>/fisrtpage/images/advTip.jpg"/></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -760,8 +756,8 @@
         <!--今日推荐 -->
 
         <div class="am-g am-g-fixed recommendation">
-            <div class="clock am-u-sm-3" >
-            <img src="<%=path %>/fisrtpage/images/2016.png "></img>
+            <div class="clock am-u-sm-3" ">
+            <img src="<%=path%>/fisrtpage/images/2016.png "></img>
             <p>今日<br>推荐</p>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -770,7 +766,7 @@
                 <h4>开年福利篇</h4>
             </div>
             <div class="recommendationMain ">
-                <img src="<%=path %>/fisrtpage/images/tj.png "></img>
+                <img src="<%=path%>/fisrtpage/images/tj.png "></img>
             </div>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -779,7 +775,7 @@
                 <h4>让爱早回家</h4>
             </div>
             <div class="recommendationMain ">
-                <img src="<%=path %>/fisrtpage/images/tj1.png "></img>
+                <img src="<%=path%>/fisrtpage/images/tj1.png "></img>
             </div>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -788,7 +784,7 @@
                 <h4>甜甜蜜蜜</h4>
             </div>
             <div class="recommendationMain ">
-                <img src="<%=path %>/fisrtpage/images/tj2.png "></img>
+                <img src="<%=path%>/fisrtpage/images/tj2.png "></img>
             </div>
         </div>
 
@@ -810,7 +806,7 @@
                 <div class="icon-sale one "></div>
                 <h4>秒杀</h4>
                 <div class="activityMain ">
-                    <img src="<%=path %>/fisrtpage/images/activity1.jpg "/>
+                    <img src="<%=path%>/fisrtpage/images/activity1.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -821,7 +817,7 @@
                 <div class="icon-sale two "></div>
                 <h4>特惠</h4>
                 <div class="activityMain ">
-                    <img src="<%=path %>/fisrtpage/images/activity2.jpg "></img>
+                    <img src="<%=path%>/fisrtpage/images/activity2.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -832,7 +828,7 @@
                 <div class="icon-sale three "></div>
                 <h4>团购</h4>
                 <div class="activityMain ">
-                    <img src="<%=path %>/fisrtpage/images/activity3.jpg "></img>
+                    <img src="<%=path%>/fisrtpage/images/activity3.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -843,7 +839,7 @@
                 <div class="icon-sale "></div>
                 <h4>超值</h4>
                 <div class="activityMain ">
-                    <img src="<%=path %>/fisrtpage/images/activity.jpg "></img>
+                    <img src="<%=path%>/fisrtpage/images/activity.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -885,7 +881,7 @@
                         当小鱼儿恋上软豆腐
                     </div>
                 </div>
-                <img src="<%=path %>/fisrtpage/images/act1.png " />
+                <img src="<%=path%>/fisrtpage/images/act1.png " />
             </a>
         </div>
         <div class="am-u-sm-7 am-u-md-5 am-u-lg-4">
@@ -899,7 +895,7 @@
                     </div>
 
                 </div>
-                <a href="# "><img src="<%=path %>/fisrtpage/images/act2.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act2.png " /></a>
             </div>
             <div class="text-two last">
                 <div class="outer-con ">
@@ -911,7 +907,7 @@
                     </div>
 
                 </div>
-                <a href="# "><img src="<%=path %>/fisrtpage/images/act2.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act2.png " /></a>
             </div>
         </div>
         <div class="am-u-sm-12 am-u-md-4 ">
@@ -925,7 +921,7 @@
                         尝鲜价：¥4.8
                     </div>
                 </div>
-                <a href="<%=path %>/firstgoods.jsp"><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
             </div>
 
             <div class="am-u-sm-3 am-u-md-6 text-three">
@@ -938,7 +934,7 @@
                         尝鲜价：¥4.8
                     </div>
                 </div>
-                <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
             </div>
 
             <div class="am-u-sm-3 am-u-md-6 text-three">
@@ -951,7 +947,7 @@
                         尝鲜价：¥4.8
                     </div>
                 </div>
-                <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
             </div>
 
             <div class="am-u-sm-3 am-u-md-6 text-three last ">
@@ -964,7 +960,7 @@
                         尝鲜价：¥4.8
                     </div>
                 </div>
-                <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+                <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
             </div>
         </div>
 
@@ -993,7 +989,7 @@
 
         <div class="am-u-sm-5 am-u-md-4 text-one ">
             <a href="# ">
-                <img src="<%=path %>/fisrtpage/images/act1.png " />
+                <img src="<%=path%>/fisrtpage/images/act1.png " />
                 <div class="outer-con ">
                     <div class="title ">
                         零食大礼包开抢啦
@@ -1015,7 +1011,7 @@
                     仅售：¥13.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/5.jpg " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/5.jpg " /></a>
         </div>
 
         <div class="am-u-md-4 am-u-lg-2 text-three">
@@ -1028,7 +1024,7 @@
                     尝鲜价：¥4.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
         </div>
         <div class="am-u-md-4 am-u-lg-2 text-three">
             <div class="outer-con ">
@@ -1040,7 +1036,7 @@
                     尝鲜价：¥4.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
         </div>
         <div class="am-u-sm-6 am-u-md-4 am-u-lg-2 text-two ">
             <div class="outer-con ">
@@ -1052,7 +1048,7 @@
                     仅售：¥13.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/5.jpg " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/5.jpg " /></a>
         </div>
         <div class="am-u-sm-6 am-u-md-3 am-u-lg-2 text-four ">
             <div class="outer-con ">
@@ -1064,7 +1060,7 @@
                     仅售：¥13.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/5.jpg " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/5.jpg " /></a>
         </div>
         <div class="am-u-sm-4 am-u-md-3 am-u-lg-4 text-five">
             <div class="outer-con ">
@@ -1076,7 +1072,7 @@
                 </div>
 
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/act2.png " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/act2.png " /></a>
         </div>
         <div class="am-u-sm-4 am-u-md-3 am-u-lg-2 text-six">
             <div class="outer-con ">
@@ -1088,7 +1084,7 @@
                     尝鲜价：¥4.8
                 </div>
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/act3.png " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/act3.png " /></a>
         </div>
         <div class="am-u-sm-4 am-u-md-3 am-u-lg-4 text-five">
             <div class="outer-con ">
@@ -1100,7 +1096,7 @@
                 </div>
 
             </div>
-            <a href="# "><img src="<%=path %>/fisrtpage/images/act2.png " /></a>
+            <a href="# "><img src="<%=path%>/fisrtpage/images/act2.png " /></a>
         </div>
     </div>
 
@@ -1128,7 +1124,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp.jpg " />
                         <div class="pro-title ">萨拉米 1+1小鸡腿</div>
                         <span class="e-price ">￥29.90</span>
                     </a>
@@ -1137,7 +1133,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp2.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp2.jpg " />
                         <div class="pro-title ">ZEK 原味海苔</div>
                         <span class="e-price ">￥8.90</span>
                     </a>
@@ -1146,7 +1142,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp.jpg " />
                         <div class="pro-title ">萨拉米 1+1小鸡腿</div>
                         <span class="e-price ">￥29.90</span>
                     </a>
@@ -1155,7 +1151,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp2.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp2.jpg " />
                         <div class="pro-title ">ZEK 原味海苔</div>
                         <span class="e-price ">￥8.90</span>
                     </a>
@@ -1164,7 +1160,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp.jpg " />
                         <div class="pro-title ">萨拉米 1+1小鸡腿</div>
                         <span class="e-price ">￥29.90</span>
                     </a>
@@ -1173,7 +1169,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp2.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp2.jpg " />
                         <div class="pro-title ">ZEK 原味海苔</div>
                         <span class="e-price ">￥8.90</span>
                     </a>
@@ -1182,7 +1178,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp.jpg " />
                         <div class="pro-title ">萨拉米 1+1小鸡腿</div>
                         <span class="e-price ">￥29.90</span>
                     </a>
@@ -1191,7 +1187,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp2.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp2.jpg " />
                         <div class="pro-title ">ZEK 原味海苔</div>
                         <span class="e-price ">￥8.90</span>
                     </a>
@@ -1200,7 +1196,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp.jpg " />
                         <div class="pro-title ">萨拉米 1+1小鸡腿</div>
                         <span class="e-price ">￥29.90</span>
                     </a>
@@ -1209,7 +1205,7 @@
             <li>
                 <div class="list ">
                     <a href="# ">
-                        <img src="<%=path %>/fisrtpage/images/cp2.jpg " />
+                        <img src="<%=path%>/fisrtpage/images/cp2.jpg " />
                         <div class="pro-title ">ZEK 原味海苔</div>
                         <span class="e-price ">￥8.90</span>
                     </a>
@@ -1249,10 +1245,10 @@
 <!--引导 -->
 
 <div class="navCir">
-    <li class="active"><a href="<%=path %>/fisrtpage/home/home3.html"><i class="am-icon-home "></i>首页</a></li>
-    <li><a href="<%=path %>/fisrtpage/home/sort.html"><i class="am-icon-list"></i>分类</a></li>
-    <li><a href="<%=path %>/fisrtpage/home/shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
-    <li><a href="<%=path %>/fisrtpage/home/person/index.html"><i class="am-icon-user"></i>我的</a></li>
+    <li class="active"><a href="home3.html"><i class="am-icon-home "></i>首页</a></li>
+    <li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
+    <li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
+    <li><a href="<%=path%>/fisrtpage/person/index.html"><i class="am-icon-user"></i>我的</a></li>
 </div>
 <!--菜单 -->
 <div class=tip>
@@ -1264,7 +1260,7 @@
                 </a>
                 <div class="ibar_login_box status_login ">
                     <div class="avatar_box ">
-                        <p class="avatar_imgbox "><img src="<%=path %>/fisrtpage/images/no-img_mid_.jpg " /></p>
+                        <p class="avatar_imgbox "><img src="<%=path%>/fisrtpage/images/no-img_mid_.jpg " /></p>
                         <ul class="user_info ">
                             <li>用户名：sl1903</li>
                             <li>级&nbsp;别：普通会员</li>
@@ -1309,7 +1305,7 @@
 
             <div id="brand " class="item ">
                 <a href="#">
-                    <span class="wdsc "><img src="<%=path %>/fisrtpage/images/wdsc.png " /></span>
+                    <span class="wdsc "><img src="<%=path%>/fisrtpage/images/wdsc.png " /></span>
                 </a>
                 <div class="mp_tooltip ">
                     我的收藏
@@ -1319,7 +1315,7 @@
 
             <div id="broadcast " class="item ">
                 <a href="# ">
-                    <span class="chongzhi "><img src="<%=path %>/fisrtpage/images/chongzhi.png " /></span>
+                    <span class="chongzhi "><img src="<%=path%>/fisrtpage/images/chongzhi.png " /></span>
                 </a>
                 <div class="mp_tooltip ">
                     我要充值
@@ -1335,7 +1331,7 @@
                 <!--二维码 -->
                 <li class="qtitem ">
                     <a href="#none "><span class="mpbtn_qrcode "></span></a>
-                    <div class="mp_qrcode " style="display:none; "><img src="<%=path %>/fisrtpage/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
+                    <div class="mp_qrcode " style="display:none; "><img src="<%=path%>/fisrtpage/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
                 </li>
                 <li class="qtitem ">
                     <a href="#top " class="return_top "><span class="top "></span></a>
@@ -1414,9 +1410,11 @@
     </div>
 </div>
 <script>
-    window.jQuery || document.write('<script src="<%=path %>/fisrtpage/basic/js/jquery.min.js "><\/script>');
+    window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
 </script>
-<script type="text/javascript " src="<%=path %>/fisrtpage/basic/js/quick_links.js "></script>
+<script type="text/javascript " src="<%=path%>/fisrtpage/basic/js/quick_links.js "></script>
 </body>
+
+
 
 </html>

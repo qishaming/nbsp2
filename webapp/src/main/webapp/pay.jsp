@@ -12,15 +12,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>结算页面</title>
-    <link href="<%=path %>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
-    <link href="<%=path %>/fisrtpage/css/jsstyle.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="<%=path %>/fisrtpage/js/address.js"></script>
+    <link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<%=path%>/fisrtpage/css/jsstyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=path%>/fisrtpage/js/address.js"></script>
 </head>
 <body>
 
 
+<!--顶部导航条 -->
 <!--顶部导航条 -->
 <div class="am-container header">
     <ul class="message-l">
@@ -43,14 +44,15 @@
         </div>
         <div class="topMessage favorite">
             <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
-        </div>
     </ul>
+</div>
+
 <!--悬浮搜索框-->
 
 <div class="nav white">
-    <div class="logo"><img src="<%=path %>/fisrtpage/images/logo.png" /></div>
+    <div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
     <div class="logoBig">
-        <li><img src="<%=path %>/fisrtpage/images/logobig.png" /></li>
+        <li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
     </div>
 
     <div class="search-bar pr">
@@ -79,9 +81,9 @@
                     <div class="address-left">
                         <div class="user DefaultAddr">
 
-										<span class="buy-address-detail">
+										<span class="buy-address-detail">   
                    <span class="buy-user">艾迪 </span>
-										<span class="buy-phone">15888888888</span>
+										<span class="buy-phone">15871145629</span>
 										</span>
                         </div>
                         <div class="default-address DefaultAddr">
@@ -98,7 +100,7 @@
                         <ins class="deftip">默认地址</ins>
                     </div>
                     <div class="address-right">
-                        <a href="<%=path %>/fisrtpage/person/address.html">
+                        <a href="<%=path%>/fisrtpage/person/address.html">
                             <span class="am-icon-angle-right am-icon-lg"></span></a>
                     </div>
                     <div class="clear"></div>
@@ -117,9 +119,9 @@
                     <div class="address-left">
                         <div class="user DefaultAddr">
 
-										<span class="buy-address-detail">
+										<span class="buy-address-detail">   
                    <span class="buy-user">艾迪 </span>
-										<span class="buy-phone">15877777777</span>
+										<span class="buy-phone">15871145629</span>
 										</span>
                         </div>
                         <div class="default-address DefaultAddr">
@@ -128,7 +130,7 @@
 								   <span class="province">湖北</span>省
 										<span class="city">武汉</span>市
 										<span class="dist">武昌</span>区
-										<span class="street">东湖路75号众环大厦9栋9层999</span>
+										<span class="street">东湖路75号众环大厦2栋9层902</span>
 										</span>
 
                             </span>
@@ -171,9 +173,9 @@
         <div class="logistics">
             <h3>选择支付方式</h3>
             <ul class="pay-list">
-                <li class="pay card"><img src="<%=path %>/fisrtpage/images/wangyin.jpg" />银联<span></span></li>
-                <li class="pay qq"><img src="<%=path %>/fisrtpage/images/weizhifu.jpg" />微信<span></span></li>
-                <li class="pay taobao"><img src="<%=path %>/fisrtpage/images/zhifubao.jpg" />支付宝<span></span></li>
+                <li class="pay card"><img src="<%=path%>/fisrtpage/images/wangyin.jpg" />银联<span></span></li>
+                <li class="pay qq"><img src="<%=path%>/fisrtpage/images/weizhifu.jpg" />微信<span></span></li>
+                <li class="pay taobao"><img src="<%=path%>/fisrtpage/images/zhifubao.jpg" />支付宝<span></span></li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -214,7 +216,7 @@
                                     <li class="td td-item">
                                         <div class="item-pic">
                                             <a href="#" class="J_MakePoint">
-                                                <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+                                                <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
                                         </div>
                                         <div class="item-info">
                                             <div class="item-basic-info">
@@ -264,10 +266,12 @@
 
                             </ul>
                             <div class="clear"></div>
+
                         </div>
+                </tr>
                 <div class="clear"></div>
             </div>
-                </tr>
+
             <tr id="J_BundleList_s_1911116345_1" class="item-list">
                 <div id="J_Bundle_s_1911116345_1_0" class="bundle  bundle-last">
                     <div class="bundle-main">
@@ -276,7 +280,7 @@
                                 <li class="td td-item">
                                     <div class="item-pic">
                                         <a href="#" class="J_MakePoint">
-                                            <img src="<%=path %>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+                                            <img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
                                     </div>
                                     <div class="item-info">
                                         <div class="item-basic-info">
@@ -327,9 +331,10 @@
 
                         </ul>
                         <div class="clear"></div>
+
                     </div>
-        </div>
             </tr>
+        </div>
         <div class="clear"></div>
         <div class="pay-total">
             <!--留言-->
@@ -428,7 +433,7 @@
                         </p>
                         <p class="buy-footer-address">
                             <span class="buy-line-title">收货人：</span>
-                            <span class="buy-address-detail">
+                            <span class="buy-address-detail">   
                                          <span class="buy-user">艾迪 </span>
 												<span class="buy-phone">15871145629</span>
 												</span>
@@ -520,7 +525,7 @@
                 <label for="user-intro" class="am-form-label">详细地址</label>
                 <div class="am-form-content">
                     <textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
-                    <small>100字以内写出你的详细地址<%=path %>/fisrtpage.</small>
+                    <small>100字以内写出你的详细地址<%=path%>/fisrtpage.</small>
                 </div>
             </div>
 
@@ -536,6 +541,7 @@
 </div>
 
 <div class="clear"></div>
+
 
 </div>
 </body>
