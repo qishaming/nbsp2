@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="webapp:war exploded">
-    <output-path>$PROJECT_DIR$/../../work/nbsp2/webapp/target/webapp</output-path>
+    <output-path>$PROJECT_DIR$/webapp/target/webapp</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -15,6 +15,9 @@
           </element>
           <element id="archive" name="jpl-1.0-SNAPSHOT.jar">
             <element id="module-output" name="jpl" />
+          </element>
+          <element id="archive" name="gyc-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="gyc" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
@@ -124,7 +127,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../../work/nbsp2/webapp/target/webapp/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapp/target/webapp/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="webapp/web/Web" />
     </root>

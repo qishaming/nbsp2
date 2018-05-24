@@ -12,5 +12,41 @@
 
         select * from user
     </select>
-   
+
+    <select id="queryOrder" parameterType="java.lang.Integer" resultType="java.util.Map">
+        SELECT * FROM pyg_orderform po,pyg_goods pg,pyg_customer pc,user u WHERE po.goodsid=pg.goodsid
+        AND po.customerId = pc.customerId AND pc.userid=u.userid
+        <if test="orderFormState!=null">
+            AND orderFormState = #{orderFormState}
+        </if>
+        AND  orderFormState>0
+        AND  u.userid=#{userid}
+    </select>
+
+    <update id="tuiOrder" >
+        UPDATE pyg_orderform
+SET
+  orderFormState = 5,
+
+
+  orderUpdateTime = #{date}
+
+WHERE orderFormId = #{orderFormId};
+    </update>
+    <update id="shouOrder">
+        UPDATE pyg_orderform
+SET
+  orderFormState = 3,
+
+
+  orderUpdateTime = #{date}
+
+WHERE orderFormId = #{orderFormId};
+    </update>
+    <delete id="delOrder" parameterType="java.lang.Integer">
+        DELETE
+FROM pyg_orderform
+WHERE orderFormId = #{orderFormId};
+    </delete>
+
 </mapper>
