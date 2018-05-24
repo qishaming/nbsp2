@@ -88,11 +88,11 @@
 <div class="banner">
     <!--轮播 -->
     <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
-        <ul class="am-slides">
-            <li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
+        <ul class="am-slides" id="showphotos">
+            <%--<li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
             <li class="banner2"><a><img src="<%=path%>/fisrtpage/images/ad2.jpg" /></a></li>
             <li class="banner3"><a><img src="<%=path%>/fisrtpage/images/ad3.jpg" /></a></li>
-            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>
+            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>--%>
 
         </ul>
     </div>
@@ -687,20 +687,39 @@
 
 <!--轮播 -->
 <script type="text/javascript">
-    (function() {
-        $('.am-slider').flexslider();
-    });
-    $(document).ready(function() {
-        $("li").hover(function() {
-            $(".category-content .category-list li.first .menu-in").css("display", "none");
-            $(".category-content .category-list li.first").removeClass("hover");
-            $(this).addClass("hover");
-            $(this).children("div.menu-in").css("display", "block")
-        }, function() {
-            $(this).removeClass("hover")
-            $(this).children("div.menu-in").css("display", "none")
-        });
+    $.ajax({
+        url:"<%=path%>/ZnnController/queryPhoto.do",
+        type:"post",
+        dataType:"json",
+        success:function(data){
+            var html="";
+            for(var i = 0; i < data.length; i++){
+                if (data[i].gstate==1){
+                    html+= "<li class='banner"+i+"'><a><img src='http://localhost:8080"+data[i].gphoto+"' onclick='findMerchant("+data[i].gmid+")'/></a></li>";
+                }
+            }
+            $("#showphotos").append(html);
+            $('.am-slider').flexslider();
+            /*$(document).ready(function() {*/
+            $("li").hover(function() {
+                $(".category-content .category-list li.first .menu-in").css("display", "none");
+                $(".category-content .category-list li.first").removeClass("hover");
+                $(this).addClass("hover");
+                $(this).children("div.menu-in").css("display", "block")
+            }, function() {
+                $(this).removeClass("hover")
+                $(this).children("div.menu-in").css("display", "none")
+            });
+            /*})*/
+        }
     })
+    /* (function() {
+         $('.amslider-').flexslider();
+     });*/
+    function findMerchant(gmid) {
+        alert(gmid)
+        location.href="<%=path%>/ZnnController/toqueryMerchantInfo.do?gmid="+gmid;
+    }
 </script>
 </body>
 
