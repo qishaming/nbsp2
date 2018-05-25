@@ -20,6 +20,7 @@
     <link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
     <link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="<%=path%>/fisrtpage/css/hmstyle.css" rel="stylesheet" type="text/css" />
+    <script src="<%=path%>/js/jquery-3.2.1.js"></script>
     <script src="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
     <script src="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
@@ -31,6 +32,22 @@
 
 
 
+</script>
+<script type="text/javascript">
+
+    $.ajax({
+        async : false,
+        cache : false,
+        timeout: 1000,
+        url: ' ../../syzgoods/queryShowHtml.do',
+        type: "post",
+        success: function(data){
+
+        },
+        error:function(){
+
+        }
+    });
 </script>
 
 <div class="hmtop">
@@ -89,10 +106,10 @@
     <!--轮播 -->
     <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
         <ul class="am-slides" id="showphotos">
-            <%--<li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
+            &lt;%&ndash;<li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
             <li class="banner2"><a><img src="<%=path%>/fisrtpage/images/ad2.jpg" /></a></li>
             <li class="banner3"><a><img src="<%=path%>/fisrtpage/images/ad3.jpg" /></a></li>
-            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>--%>
+            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>&ndash;%&gt;
 
         </ul>
     </div>
@@ -159,51 +176,20 @@
 
         <!--走马灯 -->
 
-        <div class="marqueen">
-            <span class="marqueen-title">商城头条</span>
-            <div class="demo">
+        <div class="marqueen" style="background-color:#FFCCCC">
 
-                <ul>
-                    <li class="title-first"><a target="_blank" href="#">
-                        <img src="<%=path%>/fisrtpage/images/TJ2.jpg"></img>
-                        <span>[特惠]</span>商城爆品1分秒
-                    </a></li>
-                    <li class="title-first"><a target="_blank" href="#">
-                        <span>[公告]</span>商城与广州市签署战略合作协议
-                        <img src="<%=path%>/fisrtpage/images/TJ.jpg"></img>
-                        <p>XXXXXXXXXXXXXXXXXX</p>
-                    </a></li>
+            <h1><font color="red" >最新新闻</font></h1>
+            <div name="title" style="color: deeppink " ></div>
+            <ul>
 
-                    <div class="mod-vip">
-                        <div class="m-baseinfo">
-                            <a href="<%=path%>/fisrtpage/person/index.html">
-                                <img src="<%=path%>/fisrtpage/images/getAvatar.do.jpg">
-                            </a>
-                            <em>
-                                Hi,<span class="s-name">小叮当</span>
-                                <a href="#"><p>点击更多优惠活动</p></a>
-                            </em>
-                        </div>
-                        <div class="member-logout">
-                            <a class="am-btn-warning btn" href="login.html">登录</a>
-                            <a class="am-btn-warning btn" href="register.html">注册</a>
-                        </div>
-                        <div class="member-login">
-                            <a href="#"><strong>0</strong>待收货</a>
-                            <a href="#"><strong>0</strong>待发货</a>
-                            <a href="#"><strong>0</strong>待付款</a>
-                            <a href="#"><strong>0</strong>待评价</a>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+                <li>
 
-                    <li><a target="_blank" href="#"><span>[特惠]</span>洋河年末大促，低至两件五折</a></li>
-                    <li><a target="_blank" href="#"><span>[公告]</span>华北、华中部分地区配送延迟</a></li>
-                    <li><a target="_blank" href="#"><span>[特惠]</span>家电狂欢千亿礼券 买1送1！</a></li>
+                </li>
 
-                </ul>
-                <div class="advTip"><img src="<%=path%>/fisrtpage/images/advTip.jpg"/></div>
-            </div>
+            </ul>
+
+
+
         </div>
         <div class="clear"></div>
     </div>
@@ -613,7 +599,7 @@
                                 tp +=" <div class='am-u-sm-7 am-u-md-4 text-two'>"+"<div class='outer-con'>"+
                                     "<div class=\'title \'>"+this.goodsName+"</div><div class=\'sub-title \'>"
                                     +"¥"+this.goodsPrice+"</div>"+"<i class=\'am-icon-shopping-basket am-icon-md  seprate\'></i>" +
-                                    "</div>"+"<a href='#' onclick='querygood("+this.goodsId+");'><img src='http://192.168.3.247:8080"+this.goodsimg+"' width='200px' height='150px'/></a></div>";
+                                    "</div>"+"<a href='#' onclick='queryGoods("+this.goodsId+");'><img src='http://192.168.3.247:8080"+this.goodsimg+"' width='200px' height='150px'/></a></div>";
 
                             } )
                             $("#r"+gt+"").html(tp);
@@ -652,6 +638,7 @@
                     })
                     $("#xiaolei"+count+"").html(tr)
                     if(count!=null & count!=""){
+
                     }
                 },
                 error:function (){
@@ -664,17 +651,47 @@
         //div 商品导航显示
     $("#sss1").on({
         mouseover:function () {
-            $('#nav').show();
+            $("#nav").show();
         }
     })
     $("#nav1").on({
         mouseover:function () {
-            $('#nav').show();
+            $("#nav").show();
         },
         mouseout:function () {
-            $('#nav').hide()
+            $("#nav").hide()
         }
     })
+
+
+
+    //新闻
+
+    $.ajax({
+        url:"<%=request.getContextPath()%>/new/queryNew",
+        type:"post",
+        dataType:"json",
+        async:false,
+        success:function (mt){
+            var div= "";
+            $(mt).each(function (){
+                div += "<div value='"+this.newsid+"' onclick='diannew("+this.newsid+")'><font color='#FFFFFF'> "+this.title+"</font></div><br/>";
+            });
+            $("[name='title']").html(div);
+        },
+        error:function (){
+            alert("程序出错2");
+        }
+    });
+    function  diannew(id){
+        location.href="<%=request.getContextPath()%>/new/queryNewHtml?newsid="+id;
+
+    }
+
+   function queryGoods(id) {
+
+       location.href="<%=request.getContextPath()%>/pyg/"+id+".html";
+   }
 
 
 
@@ -695,7 +712,7 @@
             var html="";
             for(var i = 0; i < data.length; i++){
                 if (data[i].gstate==1){
-                    html+= "<li class='banner"+i+"'><a><img src='http://localhost:8080"+data[i].gphoto+"' onclick='findMerchant("+data[i].gmid+")'/></a></li>";
+                    html+= "<li class='banner"+i+"'><a><img src='http://192.168.3.122:8080"+data[i].gphoto+"' onclick='findMerchant("+data[i].gmid+")'/></a></li>";
                 }
             }
             $("#showphotos").append(html);
@@ -721,6 +738,7 @@
         location.href="<%=path%>/ZnnController/toqueryMerchantInfo.do?gmid="+gmid;
     }
 </script>
+
 </body>
 
 

@@ -23,7 +23,7 @@ public class JplOrderController {
         Integer userid = u.getUserid();
         List list = service.queryOrder(orderFormState,userid);
         model.addAttribute("list",list);
-        return "userOrder/userOrder";
+        return "userOrder/userOrder.jsp";
     }
 
     @RequestMapping("shouOrder")

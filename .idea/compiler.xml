@@ -18,17 +18,17 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gyc" target="1.5" />
+      <module name="gyc" target="1.7" />
       <module name="jpl" target="1.6" />
-      <module name="lzg" target="1.5" />
-      <module name="nbsp2" target="1.5" />
-      <module name="parent" target="1.5" />
-      <module name="syz" target="1.5" />
-      <module name="szh" target="1.5" />
-      <module name="util" target="1.5" />
+      <module name="lzg" target="1.7" />
+      <module name="nbsp2" target="1.7" />
+      <module name="parent" target="1.7" />
+      <module name="syz" target="1.6" />
+      <module name="szh" target="1.7" />
+      <module name="util" target="1.7" />
       <module name="webapp" target="1.7" />
-      <module name="znn" target="1.5" />
-      <module name="zq" target="1.5" />
+      <module name="znn" target="1.7" />
+      <module name="zq" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

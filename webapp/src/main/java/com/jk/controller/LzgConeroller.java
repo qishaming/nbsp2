@@ -105,7 +105,7 @@ public class LzgConeroller {
     //从购物车取数据
     @RequestMapping("cart")
     public ModelAndView showCartList(HttpServletRequest request){
-        ModelAndView mav  = new ModelAndView("one/home/shopcart");
+        ModelAndView mav  = new ModelAndView("one/home/shopcart.jsp");
         //获取购物车列表
         List cartList = getCartListFromCookie(request);
         //绑定参数
@@ -120,7 +120,7 @@ public class LzgConeroller {
     //购物车跳转至结算页面
     @RequestMapping("cartToJiesuan")
     public ModelAndView cartToJiesuan(HttpServletRequest request){
-        ModelAndView mav  = new ModelAndView("one/home/pay");
+        ModelAndView mav  = new ModelAndView("one/home/pay.jsp");
         //获取购物车列表
         List cartList = getCartListFromCookie(request);
         //绑定参数

@@ -1,15 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
+<%String path = request.getContextPath(); %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>付款成功页面</title>
 <link rel="stylesheet"  type="text/css" href="../AmazeUI-2.4.2/assets/css/amazeui.css"/>
-<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
+<link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+<link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
 
-<link href="../css/sustyle.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../basic/js/jquery-1.7.min.js"></script>
+<link href="<%=path%>/fisrtpage/css/sustyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<%=path%>/fisrtpage/basic/js/jquery-1.7.min.js"></script>
 
 </head>
 
@@ -36,9 +38,9 @@
 <!--悬浮搜索框-->
 
 <div class="nav white">
-	<div class="logo"><img src="../images/logo.png" /></div>
+	<div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
     <div class="logoBig">
-      <li><img src="../images/logobig.png" /></li>
+      <li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
     </div>
     
     <div class="search-bar pr">

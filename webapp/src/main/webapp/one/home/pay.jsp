@@ -12,14 +12,14 @@
 
 		<title>结算页面</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
 
-		<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
-		<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
 
-		<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/css/jsstyle.css" rel="stylesheet" type="text/css" />
 
-		<script type="text/javascript" src="../js/address.js"></script>
+		<script type="text/javascript" src="<%=path%>/fisrtpage/js/address.js"></script>
 
 	</head>
 
@@ -53,9 +53,9 @@
 			<!--悬浮搜索框-->
 
 			<div class="nav white">
-				<div class="logo"><img src="../images/logo.png" /></div>
+				<div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
 				<div class="logoBig">
-					<li><img src="../images/logobig.png" /></li>
+					<li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
 				</div>
 
 				<div class="search-bar pr">
@@ -103,7 +103,7 @@
 									<ins class="deftip">默认地址</ins>
 								</div>
 								<div class="address-right">
-									<a href="../person/address.html">
+									<a href="<%=path%>/fisrtpage/person/address.html">
 										<span class="am-icon-angle-right am-icon-lg"></span></a>
 								</div>
 								<div class="clear"></div>
@@ -176,9 +176,9 @@
 					<div class="logistics">
 						<h3>选择支付方式</h3>
 						<ul class="pay-list">
-							<li class="pay card"><img src="../images/wangyin.jpg" />银联<span></span></li>
-							<li class="pay qq"><img src="../images/weizhifu.jpg" />微信<span></span></li>
-							<li class="pay taobao"><img src="../images/zhifubao.jpg" />支付宝<span></span></li>
+							<li class="pay card"><img src="<%=path%>/fisrtpage/images/wangyin.jpg" />银联<span></span></li>
+							<li class="pay qq"><img src="<%=path%>/fisrtpage/images/weizhifu.jpg" />微信<span></span></li>
+							<li class="pay taobao"><img src="<%=path%>/fisrtpage/images/zhifubao.jpg" />支付宝<span></span></li>
 						</ul>
 					</div>
 					<div class="clear"></div>
@@ -412,7 +412,7 @@
 
 									<div id="holyshit269" class="submitOrder">
 										<div class="go-btn-wrap">
-											<a id="J_Go" href="success.html" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+											<a id="J_Go" href="<%=path%>/one/home/success.jsp" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
 										</div>
 									</div>
 									<div class="clear"></div>
@@ -494,7 +494,7 @@
 							<label for="user-intro" class="am-form-label">详细地址</label>
 							<div class="am-form-content">
 								<textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
-								<small>100字以内写出你的详细地址...</small>
+								<small>100字以内写出你的详细地址<%=path%>/fisrtpage.</small>
 							</div>
 						</div>
 

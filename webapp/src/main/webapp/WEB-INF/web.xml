@@ -13,6 +13,10 @@
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
     <!-- 解决Post提交中文乱码 -->
 	<filter>
 		<filter-name>encoding</filter-name>

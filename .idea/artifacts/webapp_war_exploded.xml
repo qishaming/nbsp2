@@ -19,6 +19,18 @@
           <element id="archive" name="gyc-1.0-SNAPSHOT.jar">
             <element id="module-output" name="gyc" />
           </element>
+          <element id="archive" name="znn-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="znn" />
+          </element>
+          <element id="archive" name="lzg-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="lzg" />
+          </element>
+          <element id="archive" name="syz-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="syz" />
+          </element>
+          <element id="archive" name="zq-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="zq" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.0.2.RELEASE" />
@@ -85,7 +97,6 @@
           <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
           <element id="library" level="project" name="Maven: org.apache.poi:poi-scratchpad:3.10-beta2" />
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-core:2.5.12" />
-          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
           <element id="library" level="project" name="Maven: ognl:ognl:3.1.12" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.8.2" />
@@ -124,6 +135,7 @@
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-policy:3.1.6" />
           <element id="library" level="project" name="Maven: org.apache.neethi:neethi:3.0.3" />
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http:3.1.6" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
         </element>
       </element>
       <element id="directory" name="META-INF">

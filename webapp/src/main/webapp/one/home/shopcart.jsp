@@ -15,12 +15,12 @@
 
 		<title>购物车页面</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-		<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
-		<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
-		<link href="../css/optstyle.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/css/cartstyle.css" rel="stylesheet" type="text/css" />
+		<link href="<%=path%>/fisrtpage/css/optstyle.css" rel="stylesheet" type="text/css" />
 
-		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="<%=path%>/fisrtpage/js/jquery.js"></script>
 
 	</head>
 
@@ -54,9 +54,9 @@
 			<!--悬浮搜索框-->
 
 			<div class="nav white">
-				<div class="logo"><img src="../images/logo.png" /></div>
+				<div class="logo"><img src="<%=path%>/fisrtpage/images/logo.png" /></div>
 				<div class="logoBig">
-					<li><img src="../images/logobig.png" /></li>
+					<li><img src="<%=path%>/fisrtpage/images/logobig.png" /></li>
 				</div>
 
 				<div class="search-bar pr">
@@ -137,7 +137,7 @@
 									</li>
 									<li class="td td-item">
 										<div class="item-pic">
-											<a href="#" target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
+											<a target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
 												<img src="http://192.168.3.247:8080${ff.goodsimg}" class="itempic J_ItemImg"></a>
 											<%--http://192.168.3.247:8080${ff.goodsimg}  f--%>
 										</div>
@@ -315,7 +315,7 @@
 						</div>
 						<div class="theme-signin-right">
 							<div class="img-info">
-								<img src="../images/kouhong.jpg_80x80.jpg" />
+								<img src="<%=path%>/fisrtpage/images/kouhong.jpg_80x80.jpg" />
 							</div>
 							<div class="text-info">
 								<span class="J_Price price-now">¥39.00</span>
@@ -328,10 +328,10 @@
 			</div>
 		<!--引导 -->
 		<div class="navCir">
-			<li><a href="home.html"><i class="am-icon-home "></i>首页</a></li>
-			<li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
+			<li><a href="one/home/home.html"><i class="am-icon-home "></i>首页</a></li>
+			<li><a href="one/home/sort.html"><i class="am-icon-list"></i>分类</a></li>
 			<li class="active"><a href="shopcart.jsp"><i class="am-icon-shopping-basket"></i>购物车</a></li>
-			<li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>
+			<li><a href="one/person/index.html"><i class="am-icon-user"></i>我的</a></li>
 		</div>
 
 
