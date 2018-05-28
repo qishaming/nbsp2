@@ -10,5 +10,19 @@
 
     </select>
 
+    <insert id="addBrand"  parameterType="com.jk.pojo.OrderForm">
+
+        INSERT INTO pyg_orderform(orderFormId,customerCount,customerId,goodsid,orderFormState,orderFormTotalPrice,orderRegisterTime) VALUES (
+        #{orderFormId},
+        #{customerCount},
+        #{customerId},
+        #{goodsid},
+        #{orderFormState},
+        #{orderFormTotalPrice},
+        #{orderRegisterTime}
+        )
+
+    </insert>
+
 
 </mapper>

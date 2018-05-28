@@ -36,8 +36,13 @@
                 <ul class="message-l">
                     <div class="topMessage">
                         <div class="menu-hd">
-                            <a href="#" target="_top" class="h">亲，请登录</a>
-                            <a href="#" target="_top">免费注册</a>
+                            <c:if test="${empty sessionScope.user}">
+                                <a href="login.jsp" target="_top" class="h">亲，请登录</a>
+                                <a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
+                            </c:if>
+                            <c:if test="${!empty sessionScope.user}">
+                                <h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+                            </c:if>
                         </div>
                     </div>
                 </ul>
@@ -49,7 +54,7 @@
                         <div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
                     </div>
                     <div class="topMessage mini-cart">
-                        <div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+                        <div class="menu-hd"><a id="mc-menu-hd" href="<%=path%>/cart.do" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
                     </div>
                     <div class="topMessage favorite">
                         <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
@@ -163,7 +168,7 @@
                                                     <li class="td td-item">
                                                         <div class="item-pic">
                                                             <a href="#" class="J_MakePoint">
-                                                                <img src="http://192.168.3.247:8080${list.goodsimg}" class="itempic J_ItemImg">
+                                                                <img src="http://192.168.3.118:8085${list.goodsimg}" class="itempic J_ItemImg">
                                                             </a>
                                                         </div>
                                                         <div class="item-info">
@@ -330,6 +335,11 @@
     </aside>
 </div>
 <script type="text/javascript">
+
+
+
+
+
     //催促发货
     function cuiOrder(id) {
         alert("已催促商家发货！！！");

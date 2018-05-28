@@ -267,7 +267,7 @@
         async:false,
         success:function (goods){
             //回显赋值
-            var goodsimg="http://192.168.3.247:8080"+goods.goodsimg
+            var goodsimg="http://192.168.3.118:8085"+goods.goodsimg
 
             $('#imagesss img').attr('rel',goodsimg);
             $('#repertoryNumber').val(goods.repertoryNumber);

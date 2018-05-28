@@ -5,15 +5,18 @@ package com.jk.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.jk.pojo.Goods;
 
+import com.jk.pojo.OrderForm;
 import com.jk.service.LzgService;
 import com.jk.util.CookieUtils;
 
 import com.jk.util.JsonUtils;
 import org.apache.commons.lang.StringUtils;
 
+import org.apache.xml.resolver.helpers.PublicId;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,7 +33,16 @@ public class LzgConeroller {
     private LzgService lzgService;
 
 
-    /*private Date cookieMaxage;*/
+    /*data:{'id':id,'gnum':gnum,'gprice':gprice},*/
+    @RequestMapping("addBrand")
+    @ResponseBody
+    public Integer addBrand(Integer id,Integer gnum,Double gprice, OrderForm orderForm,HttpServletRequest request){
+
+        lzgService.addBrand(id,gnum,gprice,orderForm,request);
+
+        return 1;
+    }
+
 
 
     @RequestMapping("gouwu")
@@ -80,6 +92,10 @@ public class LzgConeroller {
 
         return cartList1;
     }
+
+
+
+
     /*
      *从cookie中获取购物车列表
      */
@@ -98,8 +114,32 @@ public class LzgConeroller {
        string = string.replaceAll("Goods","");
         string = string.replaceAll("=",":");
         List<Goods> Goodss = JSONObject.parseArray(string, Goods.class);
-
         return Goodss;
+    }
+
+
+    /*从购物车中删除数据*/
+    @RequestMapping("delcart")
+    @ResponseBody
+    public ModelAndView delcart(HttpServletRequest request, HttpServletResponse response , Integer itemId, ModelAndView mav){
+
+        ModelAndView modelAndView = new ModelAndView("one/home/shopcart.jsp");
+        //获取购物车列表
+        List<Goods> cartList = getCartListFromCookie(request);
+
+        for (Goods Good : cartList) {
+            if( Good.getGoodsid() ==itemId){
+                //删除
+               cartList.remove(Good);
+                /*cartList.remove(itemId);*/
+                //跳出循环
+                break;
+            }
+        }
+        //购物车信息写入cookie
+        CookieUtils.setCookie(request, response, "cart1",
+                JsonUtils.objectToJson(cartList), true);
+        return modelAndView;
     }
 
     //从购物车取数据
@@ -130,6 +170,21 @@ public class LzgConeroller {
         //返回逻辑视图
         return mav;
     }
+
+  /*  //结算页面跳转至--
+    @RequestMapping("toSuccess")
+    public ModelAndView toSuccess(ModelAndView modelAndView){
+        ModelAndView modelAndView1 = new ModelAndView("success");
+        System.out.println("已经进入Tosuccess");
+        return modelAndView;
+    }*/
+    //结算页面跳转至--
+    @RequestMapping("toSuccess")
+    public String toSuccess(){
+        System.out.println("已经进入Tosuccess");
+        return "one/home/success.jsp";
+    }
+
 
 
 

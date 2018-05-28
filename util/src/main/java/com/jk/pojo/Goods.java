@@ -17,6 +17,15 @@ public class Goods {
     private Integer goodsAuditState;
     private Integer merchantId;
     private Integer goodnum;
+    private String goodsScript;
+
+    public String getGoodsScript() {
+        return goodsScript;
+    }
+
+    public void setGoodsScript(String goodsScript) {
+        this.goodsScript = goodsScript;
+    }
 
     public Integer getGoodnum() {
         return goodnum;
@@ -105,6 +114,7 @@ public class Goods {
     public void setGoodsAuditState(Integer goodsAuditState) {
         this.goodsAuditState = goodsAuditState;
     }
+
     @Override
     public String toString() {
         return "Goods{" +
@@ -120,6 +130,7 @@ public class Goods {
                 ", goodsAuditState=" + goodsAuditState +
                 ", merchantId=" + merchantId +
                 ", goodnum=" + goodnum +
+                ", goodsScript='" + goodsScript + '\'' +
                 '}';
     }
 

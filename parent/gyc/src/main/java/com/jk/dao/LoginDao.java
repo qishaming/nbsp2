@@ -20,4 +20,6 @@ public interface LoginDao {
     List<Goods> queryGoods(@Param("id") Integer id);
 
     List<Goods> queryGoodsInfo(@Param("id")Integer id);
+
+    List<Goods> queryGoodsInfoJg(Integer id);
 }

@@ -57,11 +57,11 @@
             <div class="topMessage">
                 <div class="menu-hd" >
                     <c:if test="${empty sessionScope.user}">
-                        <a href="login.jsp" target="_top" class="h">亲，请登录</a>
-                        <a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
-                    </c:if>
+                    <a href="login.jsp" target="_top" class="h">亲，请登录</a>
+                    <a href="http://localhost:8085/zhuche.jsp" target="_top">免费注册</a>
+                </c:if>
                     <c:if test="${!empty sessionScope.user}">
-                    <h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+                        <h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
                     </c:if>
                 </div>
             </div>
@@ -71,10 +71,10 @@
                 <div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
             </div>
             <div class="topMessage my-shangcheng">
-                <div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+                <div class="menu-hd MyShangcheng"><a onclick="tiaogeren()" ><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
             </div>
             <div class="topMessage mini-cart">
-                <div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+                <div class="menu-hd"><a id="mc-menu-hd" href="<%=path%>/cart.do" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
             </div>
             <div class="topMessage favorite">
                 <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
@@ -91,8 +91,8 @@
 
         <div class="search-bar pr">
             <a name="index_none_header_sysc" href="#"></a>
-            <form>
-                <input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
+            <form   method="post"  action="<%=request.getContextPath()%>/listsolr/list">
+                <input id="searchInput" name="key" type="text" placeholder="搜索" autocomplete="off">
                 <input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
             </form>
         </div>
@@ -106,10 +106,10 @@
     <!--轮播 -->
     <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
         <ul class="am-slides" id="showphotos">
-            &lt;%&ndash;<li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
+            <%--&lt;%&ndash;<li class="banner1"><a href="introduction.html"><img src="<%=path%>/fisrtpage/images/ad1.jpg" /></a></li>
             <li class="banner2"><a><img src="<%=path%>/fisrtpage/images/ad2.jpg" /></a></li>
             <li class="banner3"><a><img src="<%=path%>/fisrtpage/images/ad3.jpg" /></a></li>
-            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>&ndash;%&gt;
+            <li class="banner4"><a><img src="<%=path%>/fisrtpage/images/ad4.jpg" /></a></li>&ndash;%&gt;--%>
 
         </ul>
     </div>
@@ -510,7 +510,28 @@
     window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
 </script>
 <script type="text/javascript " src="<%=path%>/fisrtpage/basic/js/quick_links.js "></script>
+
 <script type="text/javascript">
+    function tiaogeren() {
+        var aa=${sessionScope.user.username};
+        if(aa==null&&aa==""){
+            alert("请先登陆")
+        }else(
+            location.href="<%=path%>/jpl/queryOrder"
+        )
+
+    }
+
+</script>
+<script type="text/javascript">
+
+
+
+
+
+
+
+
     $(function(){
             var t=0;
         $.ajax({
@@ -599,7 +620,7 @@
                                 tp +=" <div class='am-u-sm-7 am-u-md-4 text-two'>"+"<div class='outer-con'>"+
                                     "<div class=\'title \'>"+this.goodsName+"</div><div class=\'sub-title \'>"
                                     +"¥"+this.goodsPrice+"</div>"+"<i class=\'am-icon-shopping-basket am-icon-md  seprate\'></i>" +
-                                    "</div>"+"<a href='#' onclick='queryGoods("+this.goodsId+");'><img src='http://192.168.3.247:8080"+this.goodsimg+"' width='200px' height='150px'/></a></div>";
+                                    "</div>"+"<a href='#' onclick='queryGoods("+this.goodsId+");'><img src='http://192.168.3.118:8085"+this.goodsimg+"' width='200px' height='150px'/></a></div>";
 
                             } )
                             $("#r"+gt+"").html(tp);
@@ -712,7 +733,7 @@
             var html="";
             for(var i = 0; i < data.length; i++){
                 if (data[i].gstate==1){
-                    html+= "<li class='banner"+i+"'><a><img src='http://192.168.3.122:8080"+data[i].gphoto+"' onclick='findMerchant("+data[i].gmid+")'/></a></li>";
+                    html+= "<li class='banner"+i+"'><a><img src='http://localhost:8085"+data[i].gphoto+"' onclick='findMerchant("+data[i].gmid+")'/></a></li>";
                 }
             }
             $("#showphotos").append(html);
@@ -737,6 +758,8 @@
         alert(gmid)
         location.href="<%=path%>/ZnnController/toqueryMerchantInfo.do?gmid="+gmid;
     }
+
+
 </script>
 
 </body>

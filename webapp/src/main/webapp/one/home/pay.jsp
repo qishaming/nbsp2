@@ -20,6 +20,7 @@
 		<link href="<%=path%>/fisrtpage/css/jsstyle.css" rel="stylesheet" type="text/css" />
 
 		<script type="text/javascript" src="<%=path%>/fisrtpage/js/address.js"></script>
+		<script type="text/javascript" src="<%=path%>/js/jquery-3.2.1.js"></script>
 
 	</head>
 
@@ -30,8 +31,13 @@
 			<ul class="message-l">
 				<div class="topMessage">
 					<div class="menu-hd">
-						<a href="#" target="_top" class="h">亲，请登录</a>
-						<a href="#" target="_top">免费注册</a>
+						<c:if test="${empty sessionScope.user}">
+							<a href="login.jsp" target="_top" class="h">亲，请登录</a>
+							<a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
+						</c:if>
+						<c:if test="${!empty sessionScope.user}">
+							<h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+						</c:if>
 					</div>
 				</div>
 			</ul>
@@ -40,10 +46,10 @@
 					<div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
 				</div>
 				<div class="topMessage my-shangcheng">
-					<div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					<div class="menu-hd MyShangcheng"><a href="#" onclick="tiaogeren()" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
 				</div>
 				<div class="topMessage mini-cart">
-					<div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+					<div class="menu-hd"><a id="mc-menu-hd" href="<%=path%>/cart.do " target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
 				</div>
 				<div class="topMessage favorite">
 					<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
@@ -214,29 +220,14 @@
 							<c:forEach var="ff" items="${cart1}">
 							<table id="tab">
 								<tr class="item-list" >
-										<%--<div class="bundle  bundle-last ">
-                                            <div class="bundle-hd">
-                                                <div class="bd-promos">
-                                                    <div class="bd-has-promo">已享优惠:<span class="bd-has-promo-content">省￥19.50</span>&nbsp;&nbsp;</div>
-                                                    <div class="act-promo">
-                                                        <a href="#" target="_blank">第二支半价，第三支免费<span class="gt">&gt;&gt;</span></a>
-                                                    </div>
-                                                    <span class="list-change theme-login">编辑</span>
-                                                </div>
-                                            </div>--%>
-										<%--<div class="clear"></div>--%>
+
 									<div class="bundle-main">
 										<ul class="item-content clearfix">
-											<%--<li class="td td-chk">
-												<div class="cart-checkbox ">
-													<input class="check" id="J_CheckBox_170037950254" name="items[]" value="170037950254" type="checkbox">
-													<label for="J_CheckBox_170037950254"></label>
-												</div>
-											</li>--%>
+
 											<li class="td td-item">
 												<div class="item-pic">
 													<a href="#" target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
-														<img src="http://192.168.3.247:8080${ff.goodsimg}" class="itempic J_ItemImg"></a>
+														<img src="http://192.168.3.118:8085${ff.goodsimg}" class="itempic J_ItemImg"></a>
 														<%--http://192.168.3.247:8080${ff.goodsimg}  f--%>
 												</div>
 												<div class="item-info">
@@ -247,9 +238,8 @@
 											</li>
 											<li class="td td-info">
 												<div class="item-props item-props-can">
-													<span class="sku-line">颜色：12#川南玛瑙</span>
-													<span class="sku-line">包装：裸装</span>
-													<span tabindex="0" class="btn-edit-sku theme-login">修改</span>
+													<span class="sku-line">${ff.goodsScript}</span>
+													<%--<span tabindex="0" class="btn-edit-sku theme-login">修改</span>--%>
 													<i class="theme-login am-icon-sort-desc"></i>
 												</div>
 											</li>
@@ -260,9 +250,10 @@
 															<em class="price-original">78.00</em>
 														</div>
 														<div class="price-line">
-
 															<em class="J_Price price-now" tabindex="0">${ff.goodsPrice}</em>
-															<input type="hidden" id="goodsPriceId" class="goodsPriceId"  value="${ff.goodsPrice}">
+															<input type="hidden" id="goodsPriceId"  value="${ff.goodsPrice}">
+															<input type="hidden" id="goodnum"  value="${ff.goodnum}">
+															<input type="hidden" id="goodsid"  value="${ff.goodsid}">
 														</div>
 													</div>
 												</div>
@@ -320,7 +311,7 @@
 
 							</div>
 							<!--优惠券 -->
-							<div class="buy-agio">
+					<%--		<div class="buy-agio">
 								<li class="td td-coupon">
 
 									<span class="coupon-title">优惠券</span>
@@ -342,31 +333,9 @@
 											</div>
 										</option>
 									</select>
-								</li>
+								</li>--%>
 
-								<li class="td td-bonus">
 
-									<span class="bonus-title">红包</span>
-									<select data-am-selected>
-										<option value="a">
-											<div class="item-info">
-												¥50.00<span>元</span>
-											</div>
-											<div class="item-remainderprice">
-												<span>还剩</span>10.40<span>元</span>
-											</div>
-										</option>
-										<option value="b" selected>
-											<div class="item-info">
-												¥50.00<span>元</span>
-											</div>
-											<div class="item-remainderprice">
-												<span>还剩</span>50.00<span>元</span>
-											</div>
-										</option>
-									</select>
-
-								</li>
 
 							</div>
 							<div class="clear"></div>
@@ -412,7 +381,13 @@
 
 									<div id="holyshit269" class="submitOrder">
 										<div class="go-btn-wrap">
-											<a id="J_Go" href="<%=path%>/one/home/success.jsp" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+											<%--<%=path%>/one/home/success.jsp--%>
+												<%--总价放在后台计算
+												$('#total2').val(),--%>
+												<a href="#" onclick="addBrand()" class="btn-go" >提交订单</a>
+<%--
+											<a id="J_Go" href="javascript:void(0);" onclick="addBrand(${ff.goodsid},${ff.goodnum},${ff.goodsPrice})" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+--%>
 										</div>
 									</div>
 									<div class="clear"></div>
@@ -514,24 +489,43 @@
 
 
 	<script type="text/javascript">
-        $(function(){
 
-            /*页面加载 从cookie中去数据*/
-            /*$.ajax({
-                url:"<%=request.getContextPath()%>/cartToJiesuan.do",
+        function addBrand(){
+			var gp = $("#goodsPriceId").val();
+			var gn = $("#goodnum").val();
+			var gid = $("#goodsid").val();
+            $.ajax({
+                url:"<%=path%>/addBrand.do",
                 type:"post",
-                data:"",
-                dataType:"json",
+                data:{'id':gid,'gnum':gn,'gprice':gp},
+                dataType:"text",
                 success:function (result){
-                    if(result=="success"){
+                    if(result==1){
+                       /* location.href="<%=path%>/shopcart.jsp";*/
+                        location.href="<%=path%>/toSuccess.do";
+
                     }
                 },
                 error:function (){
-                    alert("未正常跳转");
+                    alert("error！");
                 }
-            })*/
+            })
+        }
+
+        /*跳转至个人中心*/
+        function tiaogeren() {
+            var aa=${sessionScope.user.username};
+            if(aa==null&&aa==""){
+                alert("请先登陆")
+            }else(
+                location.href="<%=path%>/jpl/queryOrder"
+            )
+        }
 
 
+
+		/*计算价格*/
+        $(function(){
             $("#add").click(function(){
                 var t=$(this).parent().find('input[class*=text_box]');
                 var s = parseInt(t.val());
@@ -552,8 +546,10 @@
                 var t=$(this).parent().find('input[class*=text_box]');
                 var s = parseInt(t.val());
                 var ss = 0;
-                var  g = $(".goodsPriceId").val();
+                var  g = $("#goodsPriceId").val();
                 var  t = $(".text_box").val();
+                alert(g)
+                alert(t)
                 $("#tab tr").each(function(){
                     ss+=parseInt(t) * parseFloat(g);
                 });

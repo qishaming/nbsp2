@@ -42,5 +42,10 @@
         SELECT g.*,s.`smallTypeName`,b.`bigTypeName` FROM pyg_goods g,pyg_bigtype b,pyg_smalltype s WHERE g.`smallTypeId`=s.`smallTypeId` AND s.`bigTypeId`=b.`bigTypeId`
         AND b.`bigTypeId`= #{id} and g.goodsAuditstate=3
     </select>
+
+    <select id="queryGoodsInfoJg" resultType="com.jk.bean.Goods" >
+        SELECT g.*,s.`smallTypeName`,b.`bigTypeName` FROM pyg_goods g,pyg_bigtype b,pyg_smalltype s WHERE g.`smallTypeId`=s.`smallTypeId` AND s.`bigTypeId`=b.`bigTypeId`
+        AND b.`bigTypeId`= #{id} and g.goodsAuditstate=3  ORDER BY  g.goodsPrice+0
+    </select>
    
 </mapper>

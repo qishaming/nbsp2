@@ -22,4 +22,6 @@ public interface LoginService {
     List<Goods> queryGoods(Integer id);
 
     List<Goods> queryGoodsInfo(Integer id);
+
+    List<Goods> queryGoodsInfoJg(Integer id);
 }

@@ -16,9 +16,7 @@
     <select id="queryOrder" parameterType="java.lang.Integer" resultType="java.util.Map">
         SELECT * FROM pyg_orderform po,pyg_goods pg,pyg_customer pc,user u WHERE po.goodsid=pg.goodsid
         AND po.customerId = pc.customerId AND pc.userid=u.userid
-        <if test="orderFormState!=null">
-            AND orderFormState = #{orderFormState}
-        </if>
+
         AND  orderFormState>0
         AND  u.userid=#{userid}
     </select>

@@ -39,7 +39,7 @@ public class ZnnController {
     private ModelAndView toqueryMerchantInfo(Integer gmid){
         ModelAndView mav=new ModelAndView();
         mav.addObject("gmid",gmid);
-        mav.setViewName("showMerchantInfo");
+        mav.setViewName("showMerchantInfo.jsp");
        return mav;
     }
     @RequestMapping("queryMerchantInfo")

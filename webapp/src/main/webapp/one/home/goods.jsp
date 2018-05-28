@@ -33,8 +33,13 @@
 	<ul class="message-l">
 		<div class="topMessage">
 			<div class="menu-hd">
-				<a href="#" target="_top" class="h">亲，请登录</a>
-				<a href="#" target="_top">免费注册</a>
+				<c:if test="${empty sessionScope.user}">
+					<a href="login.jsp" target="_top" class="h">亲，请登录</a>
+					<a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
+				</c:if>
+				<c:if test="${!empty sessionScope.user}">
+					<h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+				</c:if>
 			</div>
 		</div>
 	</ul>

@@ -94,6 +94,14 @@ public class LoginController {
     }
 
 
+    @RequestMapping("queryGoodsInfoJg")
+    @ResponseBody
+    public String queryGoodsInfoJg(Integer id){
+        List<Goods>   list=  loginService.queryGoodsInfoJg(id);
+        return JSON.toJSONString(list);
+    }
+
+
     @RequestMapping("tiao1")
     public String tiao1(Model model){
 

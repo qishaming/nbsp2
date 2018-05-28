@@ -67,9 +67,9 @@
 
     <div class="search-bar pr">
         <a name="index_none_header_sysc" href="#"></a>
-        <form>
-            <input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
-            <input id="ai-topsearch" class="submit am-btn"  value="搜索" index="1" type="submit">
+        <form   method="post"  action="<%=request.getContextPath()%>/listsolr/list">
+            <input id="searchInput" name="key" type="text" placeholder="搜索" autocomplete="off">
+            <input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
         </form>
     </div>
 </div>
@@ -168,7 +168,7 @@
                     <div class="sort">
                         <li class="first"><a title="综合">综合排序</a></li>
                         <li><a title="销量">销量排序</a></li>
-                        <li><a title="价格">价格优先</a></li>
+                        <li><a title="价格" onclick="jiage()">价格优先</a></li>
                         <li class="big"><a title="评价" href="#">评价为主</a></li>
                     </div>
                     <div class="clear"></div>
@@ -451,7 +451,7 @@
                             $.each(data,function(){
                                 tr +='<li>\n' +
                                     '                             <div class="i-pic limit">' +
-                                    '                                 <img src="http://192.168.3.247:8080'+this.goodsimg+'" width="500px"  height="150px"  onclick="queryGoods('+this.goodsId+')"/>' +
+                                    '                                 <img src="http://192.168.3.118:8085'+this.goodsimg+'" width="500px"  height="150px"  onclick="queryGoods('+this.goodsId+')"/>' +
                                     '                                 <p class="title fl">'+this.goodsName+'</p>' +
                                     '                                 <p class="price fl">' +
                                     '                                     <b>¥</b>' +
@@ -470,6 +470,40 @@
 
 
                 })
+
+
+                function jiage () {
+
+                    $.ajax({
+                        url: "<%=request.getContextPath()%>/login/queryGoodsInfoJg",
+                        type: "post",
+                        data: {"id": <%=request.getParameter("id")%>},
+                        dataType: "json",
+                        success: function (data) {
+                            tr = '';
+                            $.each(data,function(){
+                                tr +='<li>\n' +
+                                    '                             <div class="i-pic limit">' +
+                                    '                                 <img src="http://192.168.3.118:8085'+this.goodsimg+'" width="500px"  height="150px"  onclick="queryGoods('+this.goodsId+')"/>' +
+                                    '                                 <p class="title fl">'+this.goodsName+'</p>' +
+                                    '                                 <p class="price fl">' +
+                                    '                                     <b>￥</b>' +
+                                    '                                     <strong>'+this.goodsPrice+'</strong>' +
+                                    '                                 </p>\n' +
+                                    '                                 <p class="number fl">' +
+                                    '                                     销量<span>1110</span>' +
+                                    '                                 </p>' +
+                                    '                             </div>' +
+                                    '                         </li>';
+
+                            } )
+                            $("#goods").html(tr)
+                        }
+                    })
+
+
+                }
+
 
 
                 function queryGoods(id) {

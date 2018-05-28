@@ -51,4 +51,9 @@ public class LoginServiceImpl implements LoginService {
         return loginDao.queryGoodsInfo(id);
     }
 
+    @Override
+    public List<Goods> queryGoodsInfoJg(Integer id) {
+        return loginDao.queryGoodsInfoJg(id);
+    }
+
 }

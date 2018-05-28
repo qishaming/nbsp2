@@ -23,8 +23,13 @@
   <ul class="message-l">
     <div class="topMessage">
      <div class="menu-hd">
-       <a href="#" target="_top" class="h">亲，请登录</a>
-       <a href="#" target="_top">免费注册</a>
+         <c:if test="${empty sessionScope.user}">
+             <a href="login.jsp" target="_top" class="h">亲，请登录</a>
+             <a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
+         </c:if>
+         <c:if test="${!empty sessionScope.user}">
+             <h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+         </c:if>
      </div></div>
   </ul>
   <ul class="message-r">
@@ -60,7 +65,7 @@
    <h2>您已成功付款</h2>
    <div class="successInfo">
      <ul>
-       <li>付款金额<em>¥9.90</em></li>
+      <%-- <li>付款金额<em>¥9.90</em></li>--%>
        <div class="user-info">
          <p>收货人：艾迪</p>
          <p>联系电话：15871145629</p>

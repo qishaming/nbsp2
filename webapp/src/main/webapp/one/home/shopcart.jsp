@@ -31,8 +31,13 @@
 			<ul class="message-l">
 				<div class="topMessage">
 					<div class="menu-hd">
-						<a href="#" target="_top" class="h">亲，请登录</a>
-						<a href="#" target="_top">免费注册</a>
+						<c:if test="${empty sessionScope.user}">
+							<a href="login.jsp" target="_top" class="h">亲，请登录</a>
+							<a href="http://localhost:8080/zhuche.jsp" target="_top">免费注册</a>
+						</c:if>
+						<c:if test="${!empty sessionScope.user}">
+							<h2>  欢迎用户<font color="red"   size="4">♔${sessionScope.user.username}♔</font>登录 	</h2>
+						</c:if>
 					</div>
 				</div>
 			</ul>
@@ -41,10 +46,10 @@
 					<div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
 				</div>
 				<div class="topMessage my-shangcheng">
-					<div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					<div class="menu-hd MyShangcheng"><a href="#"  onclick="tiaogeren()" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
 				</div>
 				<div class="topMessage mini-cart">
-					<div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+					<div class="menu-hd"><a id="mc-menu-hd" href="<%=path%>/cart.do" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
 				</div>
 				<div class="topMessage favorite">
 					<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
@@ -131,14 +136,17 @@
 								<ul class="item-content clearfix">
 									<li class="td td-chk">
 										<div class="cart-checkbox ">
+<%--
 											<input class="check" id="J_CheckBox_170037950254" name="items[]" value="170037950254" type="checkbox">
+--%>
+											<input class="check-all check" id="J_CheckBox_170037950254" name="quanxuan" value="true" type="checkbox">
 											<label for="J_CheckBox_170037950254"></label>
 										</div>
 									</li>
 									<li class="td td-item">
 										<div class="item-pic">
 											<a target="_blank" data-title="美康粉黛醉美东方唇膏口红正品 持久保湿滋润防水不掉色护唇彩妆" class="J_MakePoint" data-point="tbcart.8.12">
-												<img src="http://192.168.3.247:8080${ff.goodsimg}" class="itempic J_ItemImg"></a>
+												<img src="http://192.168.3.118:8085${ff.goodsimg}" class="itempic J_ItemImg"></a>
 											<%--http://192.168.3.247:8080${ff.goodsimg}  f--%>
 										</div>
 										<div class="item-info">
@@ -149,8 +157,8 @@
 									</li>
 									<li class="td td-info">
 										<div class="item-props item-props-can">
-											<span class="sku-line">颜色：12#川南玛瑙</span>
-											<span class="sku-line">包装：裸装</span>
+											<span class="sku-line"><%--${ff.goodsScript}--%></span>
+											<span>${ff.goodsScript}</span>
 											<span tabindex="0" class="btn-edit-sku theme-login">修改</span>
 											<i class="theme-login am-icon-sort-desc"></i>
 										</div>
@@ -162,9 +170,10 @@
 													<em class="price-original">78.00</em>
 												</div>
 												<div class="price-line">
-
 													<em class="J_Price price-now" tabindex="0">${ff.goodsPrice}</em>
 													<input type="hidden" id="goodsPriceId" class="goodsPriceId" value="${ff.goodsPrice}">
+													<input type="hidden" id="goodnum"  value="${ff.goodnum}">
+													<input type="hidden" id="goodsid"  value="${ff.goodsid}">
 												</div>
 											</div>
 										</div>
@@ -178,9 +187,9 @@
 													<input class="text_box" name="" type="text" value="1" />
 													<input class="add" name="" type="button" value="+" />
 --%>
-													<input class="min am-btn" name="" id="min" type="button"  value="-" />
+													<input class="min am-btn" name="" id="min" type="button"   value="-" />
 													<input class="text_box" name="" id="text_box" type="text"  value="${ff.goodnum}" style="width:30px;" />
-													<input class="add am-btn" name="" id="add" type="button"   value="+" />
+													<input class="add am-btn" name="" id="add" type="button"    value="+" />
 												</div>
 											</div>
 										</div>
@@ -193,10 +202,10 @@
 									</li>
 									<li class="td td-op">
 										<div class="td-inner">
-											<a title="移入收藏夹" class="btn-fav" href="#">
+											<a title="移入收藏夹" class="btn-fav" href="javascript:void(0);" onclick="shoucangjia()">
                   移入收藏夹</a>
-											<a href="javascript:;" data-point-url="#" class="delete">
-                  删除</a>
+											<%--暂时注释，因为如何从cookie中删除数据还不会！2018-5-27--%>
+											<a  onclick="delGoodsInfo(${ff.goodsid})"  class="delete">删除</a>
 										</div>
 									</li>
 								</ul>
@@ -213,8 +222,8 @@
 				<div class="float-bar-wrapper">
 					<div id="J_SelectAll2" class="select-all J_SelectAll">
 						<div class="cart-checkbox">
-							<input class="check-all check" id="J_SelectAllCbx2" name="select-all" value="true" type="checkbox">
-							<label for="J_SelectAllCbx2"></label>
+							<input class="check-all check" id="J_SelectAllCbx2" name="quanxuan" value="true" type="checkbox">
+							<%--<label for="J_SelectAllCbx2"></label>--%>
 						</div>
 						<span>全选</span>
 					</div>
@@ -233,7 +242,7 @@
 						</div>
 						<div class="price-sum">
 							<span class="txt">合计:</span>
-							<strong class="price">¥<em id="J_Total">0.00</em></strong>
+							<strong class="price">¥<em id="J_Total"><span id="total2"></span></em></strong>
 						</div>
 						<div class="btn-area">
 							<a href="<%=path%>/cartToJiesuan.do"  class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算">
@@ -285,15 +294,8 @@
 							<li class="theme-options">
 								<div class="cart-title">颜色：</div>
 								<ul>
-									<li class="sku-line selected">12#川南玛瑙<i></i></li>
-									<li class="sku-line">10#蜜橘色+17#樱花粉<i></i></li>
-								</ul>
-							</li>
-							<li class="theme-options">
-								<div class="cart-title">包装：</div>
-								<ul>
-									<li class="sku-line selected">包装：裸装<i></i></li>
-									<li class="sku-line">两支手袋装（送彩带）<i></i></li>
+									<li class="sku-line selected">${ff.goodsScript}</li>
+									<span>${ff.goodsScript}</span>
 								</ul>
 							</li>
 							<div class="theme-options">
@@ -338,15 +340,65 @@
 		<script type="text/javascript">
 
 
+			/*跳转至个人中心*/
+            function tiaogeren() {
+                var aa=${sessionScope.user.username};
+                if(aa==null&&aa==""){
+                    alert("请先登陆")
+                }else(
+                    location.href="<%=path%>/jpl/queryOrder"
+                )
+            }
+
+
+            /*移入收藏夹*/
+			function shoucangjia(){
+			    alert("已经移入收藏夹，请继续浏览!")
+			}
+
+			/*删除单行信息*/
+            function delGoodsInfo(id){
+                alert(id)
+                $.ajax({
+                    url:"<%=request.getContextPath()%>/delcart.do",
+                    type:"post",
+                    data:{'itemId':id},
+                    dataType:"text",
+                    success:function (result){
+                        if(result=1){
+                            alert("删除成功！")
+                        }
+                    },
+                    error:function (){
+                        alert("删除出错！");
+                    }
+                })
+			}
+
+
+			/*页面全选*/
+            document.getElementById('J_SelectAllCbx2').onclick=function(){
+                // 获取所有的复选框
+                var checkElements=document.getElementsByName("quanxuan");
+                for(var i=0; i<checkElements.length; i++){
+                    var checkElement=checkElements[i];
+                    // 方法一
+                    // checkElement.setAttribute('checked',' checked');
+                    // 方法二
+                    checkElement.checked="checked";
+                }
+            }
 		</script>
 
 		<%--计算总价--%>
 		<script>
+
+
             $(function(){
+
                 $("#add").click(function(){
                     var t=$(this).parent().find('input[class*=text_box]');
                     var s = parseInt(t.val());
-                    alert(s);
                     t.val(s++);
                     setTotal();
                 })
@@ -354,7 +406,7 @@
                     var t=$(this).parent().find('input[class*=text_box]');
                     var s = parseInt(t.val());
                     s--;
-                   if(s=0){
+                    if(s=0){
                         t.val(0);
                     }
                     setTotal();
@@ -369,16 +421,86 @@
                         ss+=parseInt(t) * parseFloat(g);
                     });
                     $("#total1").html(ss.toFixed(2));
+                    $("#total2").html(ss.toFixed(2));
                 }
                 setTotal();
-            })
 
-            /* var t=$(this).parent().find('input[class*=text_box]');
-                    var tt = t.val();
-                    var g=$(this).find('input[class*=goodsPriceId]');
-                    var gg = t.val();
-                    alert(tt)
-                    alert(gg)*/
+               /* $("#add").click(function(){
+                    //var t=$(this).parent().find('input[class*=text_box]');
+                    var  tval1 = $(".text_box").val();
+                    var tval = parseInt(tval1.val());
+                    /!* if(tval=1){
+                          $("#total1").html($("#goodsPriceId").val());
+                      }*!/
+                    tval=tval+1;
+                    setTotal();
+
+                })
+                $("#min").click(function(){
+                    var t=$(this).parent().find('input[class*=text_box]');
+                    var s = parseInt(t.val());
+                    if(parseInt(t.val())>1){
+                        s=s-1;
+                    }
+                    if(s=0){
+                        t.val(0);
+                    }
+                    setTotal();
+                })
+
+                function setTotal(){
+                     var t=$(this).parent().find('input[class*=text_box]');
+                      var s = parseInt(t.val());
+                    var ss = 0;
+                    var  gval = $(".goodsPriceId").val();
+                    var  tval = $(".text_box").val();
+                    $("#tab tr").each(function(){
+                        ss+=parseInt(tval) * parseFloat(gval);
+                    });
+                    $("#total1").html(ss.toFixed(2));
+                    $("#total2").html(ss.toFixed(2));
+                }*/
+
+/*
+            var gn = $("#goodnum").val();
+            var gid = $("#goodsid").val();
+
+                function add(){
+                $.ajax({
+                    url:"<%=request.getContextPath()%>/cart/update1.do",
+                    type:"post",
+                    data:{'itemId':gid,'num':gn},
+                    dataType:"text",
+                    success:function (result){
+                        if(result==jiacount){
+                             $("#goodnum").val(jiacount);
+                            setTotal();
+                        }
+                    },
+                    error:function (){
+                        alert("error！");
+                    }
+                })
+            }
+                function min(){
+                $.ajax({
+                    url:"<%=request.getContextPath()%>/cart/update.do",
+                    type:"post",
+                    data:{'itemId':gid,'num':gn},
+                    dataType:"text",
+                    success:function (){
+                        alert("success")
+                        setTotal();
+                    },
+                    error:function (){
+                        alert("error！");
+                    }
+                })
+            }*/
+
+
+
+            })
 		</script>
 
 
